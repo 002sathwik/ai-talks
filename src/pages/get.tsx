@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { api } from "~/utils/api";
 import toast from "react-hot-toast";
-import { ConfettiButton } from "~/components/magicui/confetti";
 import { useRouter } from "next/navigation";
 
 type Talk = {
@@ -71,13 +70,7 @@ const GetTalk = () => {
             </div>
 
             {!selectedTalk && !loading && (
-                <ConfettiButton
-                    options={{
-                        get angle() {
-                            return Math.random() * 360;
-                        },
-                    }}
-                >
+               
                     <motion.button
                         onClick={handlePickTalk}
                         className="bg-blue-500 px-6 py-3 rounded-lg text-lg font-semibold hover:scale-105 transition-all"
@@ -85,7 +78,7 @@ const GetTalk = () => {
                     >
                         🎲 Pick Talk
                     </motion.button>
-                </ConfettiButton>
+           
 
             )}
 

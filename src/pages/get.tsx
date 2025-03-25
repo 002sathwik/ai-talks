@@ -57,7 +57,7 @@ const GetTalk = () => {
     };
     const router = useRouter();
     const handleClick = () => {
-        router.push("https://wa.me/9902130645");
+        router.push("https://wa.me/919902130645");
     };
     return (
         <div className="w-full h-screen flex flex-col items-center justify-center gap-6 bg-slate-950 text-white">

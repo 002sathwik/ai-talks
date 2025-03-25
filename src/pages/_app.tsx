@@ -1,5 +1,5 @@
 import { type AppType } from "next/app";
-import { Geist, Lilita_One, Lobster } from "next/font/google";
+import {Lobster} from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import { api } from "~/utils/api";
 

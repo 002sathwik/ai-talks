@@ -35,7 +35,7 @@ const GetTalk = () => {
     const handlePickTalk = async () => {
         setLoading(true);
         try {
-            const response = await refetch(); // Fetch a new talk
+            const response = await refetch();
             if (response.data) {
                 setSelectedTalk(response.data);
             } else {
@@ -68,10 +68,9 @@ const GetTalk = () => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                 >
-                    ➕ Add
+                    ➕Add
                 </motion.button>
             </div>
-
             {!selectedTalk && !loading && (
 
                 <motion.button
@@ -84,7 +83,6 @@ const GetTalk = () => {
 
 
             )}
-
             {loading && (
                 <motion.div
                     className="text-lg font-semibold text-gray-300"
@@ -94,8 +92,6 @@ const GetTalk = () => {
                     Picking a talk...
                 </motion.div>
             )}
-
-
             {selectedTalk && (
                 <motion.div
                     className="p-4 bg-gray-800 rounded-lg shadow-lg w-60 text-center"
@@ -107,8 +103,6 @@ const GetTalk = () => {
                     <p className="text-xl text-gray-400 mt-2">
                         {selectedTalk.aiId ? "AI" : "ME"}
                     </p>
-
-
                     <div className="flex flex-col justify-center gap-3 mt-5">
                         <motion.button
                             onClick={() => handleUpdateState("NOT_COMPLETED")}
@@ -135,9 +129,6 @@ const GetTalk = () => {
                 </motion.div>
             )}
             <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 mb-4 flex flex-col items-center">
-
-
-
                 <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}

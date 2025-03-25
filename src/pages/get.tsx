@@ -109,7 +109,7 @@ const GetTalk = () => {
                     </p>
 
 
-                    <div className="flex justify-center gap-3 mt-5">
+                    <div className="flex flex-col justify-center gap-3 mt-5">
                         <motion.button
                             onClick={() => handleUpdateState("NOT_COMPLETED")}
                             className="px-2 py-2 bg-red-500 rounded-lg hover:scale-105 transition-all"

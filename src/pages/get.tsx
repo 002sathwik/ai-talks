@@ -98,7 +98,7 @@ const GetTalk = () => {
 
             {selectedTalk && (
                 <motion.div
-                    className="p-4 bg-gray-800 rounded-lg shadow-lg w-96 text-center"
+                    className="p-4 bg-gray-800 rounded-lg shadow-lg w-60 text-center"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4 }}

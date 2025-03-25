@@ -98,7 +98,7 @@ const GetTalk = () => {
 
             {selectedTalk && (
                 <motion.div
-                    className="p-6 bg-gray-800 rounded-lg shadow-lg w-96 text-center"
+                    className="p-4 bg-gray-800 rounded-lg shadow-lg w-96 text-center"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4 }}
@@ -112,21 +112,21 @@ const GetTalk = () => {
                     <div className="flex justify-center gap-3 mt-5">
                         <motion.button
                             onClick={() => handleUpdateState("NOT_COMPLETED")}
-                            className="px-4 py-2 bg-red-500 rounded-lg hover:scale-105 transition-all"
+                            className="px-2 py-2 bg-red-500 rounded-lg hover:scale-105 transition-all"
                             whileTap={{ scale: 0.9 }}
                         >
                             ❌ Not Completed
                         </motion.button>
                         <motion.button
                             onClick={() => handleUpdateState("COMPLETED")}
-                            className="px-4 py-2 bg-green-500 rounded-lg hover:scale-105 transition-all"
+                            className="px-2 py-2 bg-green-500 rounded-lg hover:scale-105 transition-all"
                             whileTap={{ scale: 0.9 }}
                         >
                             ✅ Completed
                         </motion.button>
                         <motion.button
                             onClick={() => handleUpdateState("NOT_SURE")}
-                            className="px-4 py-2 bg-yellow-500 rounded-lg hover:scale-105 transition-all"
+                            className="px-2 py-2 bg-yellow-500 rounded-lg hover:scale-105 transition-all"
                             whileTap={{ scale: 0.9 }}
                         >
                             🤔 Not Sure

@@ -55,7 +55,10 @@ const GetTalk = () => {
             state
         });
     };
-    const router =useRouter();
+    const router = useRouter();
+    const handleClick = () => {
+        router.push("https://wa.me/9902130645");
+    };
     return (
         <div className="w-full h-screen flex flex-col items-center justify-center gap-6 bg-slate-950 text-white">
             <div className="absolute top-4 right-4">
@@ -65,20 +68,20 @@ const GetTalk = () => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                 >
-                    ➕ Add 
+                    ➕ Add
                 </motion.button>
             </div>
 
             {!selectedTalk && !loading && (
-               
-                    <motion.button
-                        onClick={handlePickTalk}
-                        className="bg-blue-500 px-6 py-3 rounded-lg text-lg font-semibold hover:scale-105 transition-all"
-                        whileTap={{ scale: 0.9 }}
-                    >
-                        🎲 Pick Talk
-                    </motion.button>
-           
+
+                <motion.button
+                    onClick={handlePickTalk}
+                    className="bg-blue-500 px-6 py-3 rounded-lg text-lg font-semibold hover:scale-105 transition-all"
+                    whileTap={{ scale: 0.9 }}
+                >
+                    🎲 Pick Talk
+                </motion.button>
+
 
             )}
 
@@ -100,7 +103,7 @@ const GetTalk = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4 }}
                 >
-                    <h2 className="text-6xl font-bold text-blue-400">{selectedTalk?.name}</h2>
+                    <h2 className="text-4xl font-bold text-blue-400">{selectedTalk?.name}</h2>
                     <p className="text-xl text-gray-400 mt-2">
                         {selectedTalk.aiId ? "AI" : "ME"}
                     </p>
@@ -131,6 +134,19 @@ const GetTalk = () => {
                     </div>
                 </motion.div>
             )}
+            <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 mb-4 flex flex-col items-center">
+
+
+
+                <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={handleClick}
+                    className="  border border-purple-500 px-4 py-2 rounded-full text-sm font-medium shadow-md   bg-purple-500 text-white transition-all"
+                    >                
+                    Click This and Close Your Eyes for 10 seconds  💬
+                </motion.button>
+            </div>
         </div>
     );
 };

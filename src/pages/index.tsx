@@ -55,9 +55,20 @@ export default function Home() {
             🎲 Pick
           </motion.button>
 
-          <footer className="w-full mt-10 py-4 text-center text-white ">
-            <p>Made with ❤️ By Engineer</p>
+          <footer className="w-full mt-10 py-4 text-center text-white">
+            <p>
+              Made with ❤️ By
+              <a
+                href="https://github.com/002sathwik"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple-400 hover:underline ml-1"
+              >
+                Engineer
+              </a>
+            </p>
           </footer>
+
         </div>
 
       </main>
